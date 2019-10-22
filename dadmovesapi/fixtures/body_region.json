@@ -1,0 +1,30 @@
+[
+    {
+        "model": "dadmovesapi.body_region",
+        "pk": 1,
+        "fields": {
+            "region": "head"
+        }
+    },
+    {
+        "model": "dadmovesapi.body_region",
+        "pk": 2,
+        "fields": {
+            "region": "arms"
+        }
+    },
+    {
+        "model": "dadmovesapi.body_region",
+        "pk": 3,
+        "fields": {
+            "region": "legs"
+        }
+    },
+    {
+        "model": "dadmovesapi.body_region",
+        "pk": 4,
+        "fields": {
+            "region": "hips"
+        }
+    }
+]

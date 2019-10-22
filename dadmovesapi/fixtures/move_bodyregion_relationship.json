@@ -1,0 +1,42 @@
+[
+    {
+        "model": "dadmovesapi.move_bodyregion_relationship",
+        "pk": 1,
+        "fields": {
+            "move": 2,
+            "body_region": 2
+        }
+    },
+    {
+        "model": "dadmovesapi.move_bodyregion_relationship",
+        "pk": 2,
+        "fields": {
+            "move": 2,
+            "body_region": 1
+        }
+    },
+    {
+        "model": "dadmovesapi.move_bodyregion_relationship",
+        "pk": 3,
+        "fields": {
+            "move": 3,
+            "body_region": 3
+        }
+    },
+    {
+        "model": "dadmovesapi.move_bodyregion_relationship",
+        "pk": 4,
+        "fields": {
+            "move": 1,
+            "body_region": 4
+        }
+    },
+    {
+        "model": "dadmovesapi.move_bodyregion_relationship",
+        "pk": 4,
+        "fields": {
+            "move": 1,
+            "body_region": 2
+        }
+    }
+]

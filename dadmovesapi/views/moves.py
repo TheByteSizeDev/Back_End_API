@@ -40,17 +40,17 @@ class Moves(ViewSet):
         """
         new_move = Moves()
 
-        for item in "situation_id":
-            situation_item = Move_Situation_Relationship()
-            situation_item.situation = Situation_Types.objects.get(pk=request.data["situation_id"])
-            situation_item.move = new_move
-            situation_item.save()
+        # for item in "situation_id":
+        #     situation_item = Move_Situation_Relationship()
+        #     situation_item.situation = Situation_Types.objects.get(pk=request.data["situation_id"])
+        #     situation_item.move = new_move
+        #     situation_item.save()
 
-        for item in "bodyregion_id":
-            body_region_item = Move_Bodyregion_Relationship()
-            body_region_item.region = Body_Region.objects.get(pk=request.data["body_region_id"])
-            body_region_item.move = new_move
-            body_region_item.save()         
+        # for item in "bodyregion_id":
+        #     body_region_item = Move_Bodyregion_Relationship()
+        #     body_region_item.region = Body_Region.objects.get(pk=request.data["body_region_id"])
+        #     body_region_item.move = new_move
+        #     body_region_item.save()         
 
         new_move.daddy_o = Daddy_O.objects.get(user=request.auth.user)
         new_move.difficulty_type = Difficulty_Type.objects.get(

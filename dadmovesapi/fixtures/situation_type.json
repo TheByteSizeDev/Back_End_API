@@ -1,0 +1,58 @@
+[
+    {
+        "model": "dadmovesapi.situation_type",
+        "pk": 1,
+        "fields": {
+            "situaton": "wedding"
+        }
+    },
+    {
+        "model": "dadmovesapi.situation_type",
+        "pk": 2,
+        "fields": {
+            "situaton": "bat/bar mitzvah"
+        }
+    },
+    {
+        "model": "dadmovesapi.situation_type",
+        "pk": 3,
+        "fields": {
+            "situaton": "club"
+        }
+    },
+    {
+        "model": "dadmovesapi.situation_type",
+        "pk": 4,
+        "fields": {
+            "situaton": "kid party"
+        }
+    },
+    {
+        "model": "dadmovesapi.situation_type",
+        "pk": 5,
+        "fields": {
+            "situaton": "adult only"
+        }
+    },
+    {
+        "model": "dadmovesapi.situation_type",
+        "pk": 6,
+        "fields": {
+            "situaton": "class reunion"
+        }
+    },
+    {
+        "model": "dadmovesapi.situation_type",
+        "pk": 7,
+        "fields": {
+            "situaton": "dance off"
+        }
+    },
+    {
+        "model": "dadmovesapi.situation_type",
+        "pk": 8,
+        "fields": {
+            "situaton": "work party"
+        }
+    }
+]

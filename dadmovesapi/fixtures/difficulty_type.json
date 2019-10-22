@@ -1,0 +1,30 @@
+[
+    {
+        "model": "dadmovesapi.difficulty_type",
+        "pk": 1,
+        "fields": {
+            "level": "easy"
+        }
+    },
+    {
+        "model": "dadmovesapi.difficulty_type",
+        "pk": 2,
+        "fields": {
+            "level": "medium"
+        }
+    },
+    {
+        "model": "dadmovesapi.difficulty_type",
+        "pk": 3,
+        "fields": {
+            "level": "hard"
+        }
+    },
+    {
+        "model": "dadmovesapi.difficulty_type",
+        "pk": 4,
+        "fields": {
+            "level": "advanced"
+        }
+    }
+]
