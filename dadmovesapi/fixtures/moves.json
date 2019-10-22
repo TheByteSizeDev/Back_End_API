@@ -6,7 +6,7 @@
             "name": "Washing Machine",
             "link": "https://youtu.be/efNA4NYjAmA?t=55",
             "daddy_o": 2,
-            "difficulty_type": 2 
+            "difficulty_type": 1 
         }
     },
     {
@@ -26,7 +26,7 @@
             "name": "The Sprinkler",
             "link": "https://www.youtube.com/watch?v=bOtAzgw_yEA",
             "daddy_o": 3,
-            "difficulty_type": 1 
+            "difficulty_type": 3 
         }
     }
 ]

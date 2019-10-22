@@ -1,20 +1,20 @@
 [
     {
-        "model": "dadmovesapi.dadd_o",
+        "model": "dadmovesapi.daddy_o",
         "pk": 1,
         "fields": {
             "user_id": 2
         }
     },
     {
-        "model": "dadmovesapi.dadd_o",
+        "model": "dadmovesapi.daddy_o",
         "pk": 2,
         "fields": {
             "user_id": 3
         }
     },
     {
-        "model": "dadmovesapi.dadd_o",
+        "model": "dadmovesapi.daddy_o",
         "pk": 3,
         "fields": {
             "user_id": 4

@@ -1,58 +1,58 @@
 [
     {
-        "model": "dadmovesapi.situation_type",
+        "model": "dadmovesapi.situation_types",
         "pk": 1,
         "fields": {
-            "situaton": "wedding"
+            "situation": "wedding"
         }
     },
     {
-        "model": "dadmovesapi.situation_type",
+        "model": "dadmovesapi.situation_types",
         "pk": 2,
         "fields": {
-            "situaton": "bat/bar mitzvah"
+            "situation": "bat/bar mitzvah"
         }
     },
     {
-        "model": "dadmovesapi.situation_type",
+        "model": "dadmovesapi.situation_types",
         "pk": 3,
         "fields": {
-            "situaton": "club"
+            "situation": "club"
         }
     },
     {
-        "model": "dadmovesapi.situation_type",
+        "model": "dadmovesapi.situation_types",
         "pk": 4,
         "fields": {
-            "situaton": "kid party"
+            "situation": "kid party"
         }
     },
     {
-        "model": "dadmovesapi.situation_type",
+        "model": "dadmovesapi.situation_types",
         "pk": 5,
         "fields": {
-            "situaton": "adult only"
+            "situation": "adult only"
         }
     },
     {
-        "model": "dadmovesapi.situation_type",
+        "model": "dadmovesapi.situation_types",
         "pk": 6,
         "fields": {
-            "situaton": "class reunion"
+            "situation": "class reunion"
         }
     },
     {
-        "model": "dadmovesapi.situation_type",
+        "model": "dadmovesapi.situation_types",
         "pk": 7,
         "fields": {
-            "situaton": "dance off"
+            "situation": "dance off"
         }
     },
     {
-        "model": "dadmovesapi.situation_type",
+        "model": "dadmovesapi.situation_types",
         "pk": 8,
         "fields": {
-            "situaton": "work party"
+            "situation": "work party"
         }
     }
 ]

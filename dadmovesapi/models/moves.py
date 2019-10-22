@@ -8,8 +8,6 @@ class Moves(models.Model):
     link = models.CharField(max_length=400)
     daddy_o = models.ForeignKey(Daddy_O, on_delete = models.CASCADE)
     difficulty_type = models.ForeignKey(Difficulty_Type, on_delete = models.DO_NOTHING)
-    situation_item = models.ManyToManyField("Situation_Type", through="Move_Situation_Relationship")
-    body_region_item = models.ManyToManyField("Body_Region", through="Move_Bodyregion_Relationship")
 
     class Meta:
         verbose_name = ("move")

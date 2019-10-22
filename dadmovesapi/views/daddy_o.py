@@ -10,7 +10,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from dadmovesapi.models import Daddy_O
+from ..models import Daddy_O
 
 class daddy_o_serializer(serializers.HyperlinkedModelSerializer):
     """ JSON Serializer for Daddy-Os(aka users)"""
@@ -24,7 +24,7 @@ class daddy_o_serializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'url', 'user_id')
         depth = 2
 
-class Customers(ViewSet):
+class Daddy_O(ViewSet):
     """Daddy-Os for the DadMoves app"""
 
     """Creating a Daddy-O is accomplished in register view"""
