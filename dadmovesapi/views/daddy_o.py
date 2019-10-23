@@ -24,7 +24,7 @@ class daddy_o_serializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'url', 'user_id')
         depth = 2
 
-class Daddy_O(ViewSet):
+class Daddy_Os(ViewSet):
     """Daddy-Os for the DadMoves app"""
 
     """Creating a Daddy-O is accomplished in register view"""
@@ -57,11 +57,6 @@ class Daddy_O(ViewSet):
         """ Handles get request for a single Daddy-o for the profile page """
 
         daddy_o = Daddy_O.objects.all()
-
-        # try:
-        user_id = self.request.query_params.get('daddy_o', None)
-        if user_id is not None:
-            customers = customers.filter(user__id=user_id)
 
         serializer = daddy_o_serializer(
             daddy_o, many=True, context={'request': request})

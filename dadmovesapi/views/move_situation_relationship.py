@@ -16,14 +16,14 @@ class Move_Situation_Relationship_Serializer(serializers.HyperlinkedModelSeriali
     class Meta:
         model = Move_Situation_Relationship
         url = serializers.HyperlinkedIdentityField(
-            view_name='move_situation_relationship',
+            view_name='move_situation_relationships',
             lookup_field='id'
         )
         fields = ('id', 'situation', 'move')
         depth = 1
         
         
-class Move_Situation_Relationship(ViewSet):
+class Move_Situation_Relationships(ViewSet):
     """Situation type relationship for DadMoves"""
     
     def create(self, request):
@@ -80,11 +80,11 @@ class Move_Situation_Relationship(ViewSet):
             Response -- 200, 404, or 500 status code
         """
         try:
-            Move_Bodyregion_Relationship.objects.get(pk=pk).delete()
+            Move_Situation_Relationship.objects.get(pk=pk).delete()
             
             return Response({}, status=status.HTTP_204_NO_CONTENT)
         
-        except Move_Bodyregion_Relationship.DoesNotExist as ex:
+        except Move_Situation_Relationship.DoesNotExist as ex:
              return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
         except Exception as ex:

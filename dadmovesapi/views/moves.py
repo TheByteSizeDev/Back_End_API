@@ -5,11 +5,8 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from ..models import Moves, Daddy_O, Difficulty_Type, Move_Bodyregion_Relationship, Move_Situation_Relationship, Body_Region, Situation_Types
-from .move_situation_relationship import Move_Situation_Relationship_Serializer
-from .body_region import Body_Region_Serializer
-from .move_bodyregion_relationship import Move_Bodyregion_Relationship_Serializer
-from .situation_type import Situation_Type_Serializer
+from ..models import Moves, Daddy_O, Difficulty_Type
+
 
 
 class Moves_Serializer(serializers.HyperlinkedModelSerializer):
@@ -17,20 +14,20 @@ class Moves_Serializer(serializers.HyperlinkedModelSerializer):
     Arguments:
         serializers
     """
-    situation_items = Situation_Type_Serializer(many=True)
-    body_region_items = Body_Region_Serializer(many=True)
+    # situation_items = Situation_Type_Serializer(many=True)
+    # body_region_items = Body_Region_Serializer(many=True)
 
     class Meta:
         model = Moves
         url = serializers.HyperlinkedIdentityField(
-            view_name='moves',
+            view_name='move',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'name', 'link', 'daddy_o', 'difficulty_type', 'situation_items', 'body_region_items')
+        fields = ('id', 'url', 'name', 'link', 'daddy_o', 'difficulty_type')
         depth = 1
 
 
-class Moves(ViewSet):
+class Move(ViewSet):
     """Moves for DadMoves Api"""
 
     def create(self, request):
@@ -39,6 +36,8 @@ class Moves(ViewSet):
             Response -- JSON serialized Move instance
         """
         new_move = Moves()
+
+        # FIXME: This needs to be looked over again once I get  to the front end add
 
         # for item in "situation_id":
         #     situation_item = Move_Situation_Relationship()

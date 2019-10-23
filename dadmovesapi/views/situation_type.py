@@ -43,7 +43,7 @@ class Situation_Type(ViewSet):
         Returns:
             Response -- JSON serializer list of situation types
         """
-        situation_type = Situation_Type.objects.all()
+        situation_type = Situation_Types.objects.all()
 
         serializer = Situation_Type_Serializer(
             situation_type, many=True, context={'request': request})

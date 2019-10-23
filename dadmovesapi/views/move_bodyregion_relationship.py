@@ -23,7 +23,7 @@ class Move_Bodyregion_Relationship_Serializer(serializers.HyperlinkedModelSerial
         depth = 1
         
         
-class Move_Bodyregion_Relationship(ViewSet):
+class Move_Bodyregion_Relationships(ViewSet):
     """body region relationship for DadMoves"""
     
     def create(self, request):

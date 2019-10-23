@@ -22,7 +22,7 @@ class Body_Region_Serializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'url', 'region' )
 
 
-class Body_Region(ViewSet):
+class Body_Regions(ViewSet):
     """Body region for DadMoves Api"""
 
     def retrieve(self, request, pk=None):

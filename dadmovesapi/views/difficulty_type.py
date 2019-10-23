@@ -22,7 +22,7 @@ class Difficulty_Type_Serializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'url', 'level' )
 
 
-class Difficulty_Type(ViewSet):
+class Difficulty_Types(ViewSet):
     """Difficulty types for DadMoves Api"""
 
     def retrieve(self, request, pk=None):
