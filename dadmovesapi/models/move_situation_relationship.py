@@ -8,5 +8,5 @@ class Move_Situation_Relationship(models.Model):
     move = models.ForeignKey(Moves, on_delete = models.CASCADE)
 
     class Meta:
-        verbose_name = ("move_situation_relationship")
-        verbose_name_plural = ("move_situation_relationships")
+        verbose_name = ("situation_item")
+        verbose_name_plural = ("situation_items")

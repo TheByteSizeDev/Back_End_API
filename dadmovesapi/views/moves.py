@@ -5,17 +5,17 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from ..models import Moves, Daddy_O, Difficulty_Type
-
-
+from ..models import Moves, Daddy_O, Difficulty_Type, Situation_Type, Body_Region
+from .situation_type import Situation_Type_Serializer
+from .body_region import Body_Region_Serializer
 
 class Moves_Serializer(serializers.HyperlinkedModelSerializer):
     """JSON serializer for dadmoves dance moves
     Arguments:
         serializers
     """
-    # situation_items = Situation_Type_Serializer(many=True)
-    # body_region_items = Body_Region_Serializer(many=True)
+    situation_items = Situation_Type_Serializer(many=True)
+    body_region_items = Body_Region_Serializer(many=True)
 
     class Meta:
         model = Moves
@@ -23,7 +23,7 @@ class Moves_Serializer(serializers.HyperlinkedModelSerializer):
             view_name='move',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'name', 'link', 'daddy_o_id', 'difficulty_type')
+        fields = ('id', 'url', 'name', 'link', 'daddy_o_id', 'difficulty_type', 'situation_items', 'body_region_items')
         depth = 1
 
 
