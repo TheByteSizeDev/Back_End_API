@@ -1,6 +1,6 @@
 from django.db import models
 
-class Situation_Types(models.Model):
+class Situation_Type(models.Model):
     """Model for Situation Types"""
     name = models.CharField(max_length=200)
 

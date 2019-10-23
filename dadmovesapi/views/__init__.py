@@ -6,4 +6,4 @@ from .move_situation_relationship import Move_Situation_Relationships
 from .moves import Move
 from .register import register_user
 from .register import login_user
-from .situation_type import Situation_Type
+from .situation_type import Situation_Types

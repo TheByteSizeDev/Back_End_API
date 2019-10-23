@@ -5,7 +5,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from ..models import Move_Situation_Relationship, Moves, Situation_Types
+from ..models import Move_Situation_Relationship, Moves, Situation_Type
 
 class Move_Situation_Relationship_Serializer(serializers.HyperlinkedModelSerializer):
     """JSON serializer for the situation type relationship with moves

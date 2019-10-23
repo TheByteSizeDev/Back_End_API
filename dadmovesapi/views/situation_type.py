@@ -5,7 +5,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from ..models import Situation_Types
+from ..models import Situation_Type
 
 
 class Situation_Type_Serializer(serializers.HyperlinkedModelSerializer):
@@ -14,15 +14,15 @@ class Situation_Type_Serializer(serializers.HyperlinkedModelSerializer):
         serializers
     """
     class Meta:
-        model = Situation_Types
+        model = Situation_Type
         url = serializers.HyperlinkedIdentityField(
-            view_name='situation_type',
+            view_name='situation_types',
             lookup_field='id'
         )
         fields = ('id', 'url', 'name')
 
 
-class Situation_Type(ViewSet):
+class Situation_Types(ViewSet):
     """Situation types for DadMoves Api"""
 
     def retrieve(self, request, pk=None):
@@ -43,8 +43,8 @@ class Situation_Type(ViewSet):
         Returns:
             Response -- JSON serializer list of situation types
         """
-        situation_type = Situation_Types.objects.all()
+        situation_types = Situation_Type.objects.all()
 
         serializer = Situation_Type_Serializer(
-            situation_type, many=True, context={'request': request})
+            situation_types, many=True, context={'request': request})
         return Response(serializer.data)
