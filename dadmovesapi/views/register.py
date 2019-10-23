@@ -58,12 +58,12 @@ def register_user(request):
         password=req_body['password']
     )
 
-    customer = Daddy_O.objects.create(
+    daddy_o = Daddy_O.objects.create(
         user=new_user
     )
 
     # Commit the user to the database by saving it
-    customer.save()
+    daddy_o.save()
 
     # Use the REST Framework's token generator on the new user account
     token = Token.objects.create(user=new_user)
