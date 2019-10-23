@@ -19,7 +19,7 @@ class Situation_Type_Serializer(serializers.HyperlinkedModelSerializer):
             view_name='situation_type',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'situation' )
+        fields = ('id', 'url', 'name')
 
 
 class Situation_Type(ViewSet):

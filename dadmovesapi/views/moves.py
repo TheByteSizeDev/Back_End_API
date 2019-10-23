@@ -23,7 +23,7 @@ class Moves_Serializer(serializers.HyperlinkedModelSerializer):
             view_name='move',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'name', 'link', 'daddy_o', 'difficulty_type')
+        fields = ('id', 'url', 'name', 'link', 'daddy_o_id', 'difficulty_type')
         depth = 1
 
 

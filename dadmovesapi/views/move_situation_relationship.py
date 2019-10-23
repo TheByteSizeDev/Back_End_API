@@ -19,7 +19,7 @@ class Move_Situation_Relationship_Serializer(serializers.HyperlinkedModelSeriali
             view_name='move_situation_relationships',
             lookup_field='id'
         )
-        fields = ('id', 'situation', 'move')
+        fields = ('id', 'situation_id', 'move_id')
         depth = 1
         
         
