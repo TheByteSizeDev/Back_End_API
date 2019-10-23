@@ -1,0 +1,32 @@
+[
+    {
+        "model": "dadmovesapi.moves",
+        "pk": 1,
+        "fields": {
+            "name": "Washing Machine",
+            "link": "https://youtu.be/efNA4NYjAmA?t=55",
+            "daddy_o": 2,
+            "difficulty_type": 1 
+        }
+    },
+    {
+        "model": "dadmovesapi.moves",
+        "pk": 2,
+        "fields": {
+            "name": "The Running Man",
+            "link": "https://www.youtube.com/watch?v=lYpRasK4c9k",
+            "daddy_o": 2,
+            "difficulty_type": 2 
+        }
+    },
+    {
+        "model": "dadmovesapi.moves",
+        "pk": 3,
+        "fields": {
+            "name": "The Sprinkler",
+            "link": "https://www.youtube.com/watch?v=bOtAzgw_yEA",
+            "daddy_o": 3,
+            "difficulty_type": 3 
+        }
+    }
+]
