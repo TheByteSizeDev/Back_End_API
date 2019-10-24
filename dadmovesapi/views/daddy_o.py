@@ -2,6 +2,7 @@
 
 import json
 from django.http import HttpResponseServerError
+from rest_framework.decorators import action
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
@@ -56,8 +57,20 @@ class Daddy_Os(ViewSet):
     def list(self, request):
         """ Handles get request for a single Daddy-o for the profile page """
 
-        daddy_o = Daddy_O.objects.all()
+        daddy_os = Daddy_O.objects.all()
 
         serializer = daddy_o_serializer(
-            daddy_o, many=True, context={'request': request})
+            daddy_os, many=True, context={'request': request})
+        return Response(serializer.data)
+
+    @action(methods=['get'], detail=False)
+    def currentUser(self, request):
+
+        try:
+            daddy_o = Daddy_O.objects.get(user=request.auth.user)
+        except Daddy_O.DoesNotExist as ex:
+            return Response({'message': ex.args[0]},status=status.HTTP_404_NOT_FOUND)
+
+        serializer = daddy_o_serializer(
+            daddy_o, context={'request': request})
         return Response(serializer.data)

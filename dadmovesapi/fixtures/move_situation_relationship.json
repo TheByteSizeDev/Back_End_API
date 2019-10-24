@@ -3,57 +3,56 @@
         "model": "dadmovesapi.move_situation_relationship",
         "pk": 1,
         "fields": {
-            "move": 2,
-            "situation": 4
+            "move_id": 2,
+            "situation_id": 4
         }
     },
     {
         "model": "dadmovesapi.move_situation_relationship",
         "pk": 2,
         "fields": {
-            "move": 2,
-            "situation": 1
+            "move_id": 2,
+            "situation_id": 1
         }
     },
     {
         "model": "dadmovesapi.move_situation_relationship",
         "pk": 2,
         "fields": {
-            "move": 2,
-            "situation": 6
+            "move_id": 2,
+            "situation_id": 6
         }
     },
     {
         "model": "dadmovesapi.move_situation_relationship",
         "pk": 3,
         "fields": {
-            "move": 3,
-            "situation": 3
+            "move_id": 3,
+            "situation_id": 3
         }
     },
     {
         "model": "dadmovesapi.move_situation_relationship",
         "pk": 4,
         "fields": {
-            "move": 1,
-            "situation": 4
+            "move_id": 1,
+            "situation_id": 4
         }
     },
     {
         "model": "dadmovesapi.move_situation_relationship",
         "pk": 4,
         "fields": {
-            "move": 1,
-            "situation": 2
+            "move_id": 1,
+            "situation_id": 2
         }
-    }
-    ,
+    },
     {
         "model": "dadmovesapi.move_situation_relationship",
         "pk": 4,
         "fields": {
-            "move": 1,
-            "situation": 3
+            "move_id": 1,
+            "situation_id": 3
         }
     }
 ]
