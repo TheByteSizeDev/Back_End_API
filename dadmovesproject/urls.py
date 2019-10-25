@@ -16,13 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
-from dadmovesapi.models import Body_Region, Daddy_O, Difficulty_Type, Move_Bodyregion_Relationship, Move_Situation_Relationship, Moves, Situation_Type
+from dadmovesapi.models import Body_Region, Daddy_O, Difficulty_Type, Moves, Situation_Type
 from dadmovesapi.views import register_user, login_user
 from dadmovesapi.views import Body_Regions
 from dadmovesapi.views import Daddy_Os
 from dadmovesapi.views import Difficulty_Types
-from dadmovesapi.views import Move_Bodyregion_Relationships
-from dadmovesapi.views import Move_Situation_Relationships
 from dadmovesapi.views import Move
 from dadmovesapi.views import Situation_Types
 
@@ -30,8 +28,6 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'body_region', Body_Regions, 'body_region')
 router.register(r'daddy_o', Daddy_Os, 'daddy_o')
 router.register(r'difficulty_type', Difficulty_Types, 'difficulty_type')
-router.register(r'move_bodyregion_relationship', Move_Bodyregion_Relationships, 'move_bodyregion_relationship')
-router.register(r'move_situation_relationship', Move_Situation_Relationships, 'move_situation_relationship')
 router.register(r'moves', Move, 'moves')
 router.register(r'situation_type', Situation_Types, 'situation_type')
 

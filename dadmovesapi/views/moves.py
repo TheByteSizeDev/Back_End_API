@@ -5,17 +5,13 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from ..models import Moves, Daddy_O, Difficulty_Type
-
-
+from ..models import Moves, Daddy_O, Difficulty_Type, Situation_Type, Body_Region
 
 class Moves_Serializer(serializers.HyperlinkedModelSerializer):
     """JSON serializer for dadmoves dance moves
     Arguments:
         serializers
     """
-    # situation_items = Situation_Type_Serializer(many=True)
-    # body_region_items = Body_Region_Serializer(many=True)
 
     class Meta:
         model = Moves
@@ -23,7 +19,7 @@ class Moves_Serializer(serializers.HyperlinkedModelSerializer):
             view_name='move',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'name', 'link', 'daddy_o_id', 'difficulty_type')
+        fields = ('id', 'url', 'name', 'link', 'daddy_o_id', 'difficulty_type', 'difficulty_type_id', 'situation_type_id', 'situation_type', 'body_region_id', 'body_region')
         depth = 1
 
 
@@ -35,31 +31,19 @@ class Move(ViewSet):
         Returns:
             Response -- JSON serialized Move instance
         """
-        new_move = Moves()
-
-        # FIXME: This needs to be looked over again once I get  to the front end add
-
-        # for item in "situation_id":
-        #     situation_item = Move_Situation_Relationship()
-        #     situation_item.situation = Situation_Types.objects.get(pk=request.data["situation_id"])
-        #     situation_item.move = new_move
-        #     situation_item.save()
-
-        # for item in "bodyregion_id":
-        #     body_region_item = Move_Bodyregion_Relationship()
-        #     body_region_item.region = Body_Region.objects.get(pk=request.data["body_region_id"])
-        #     body_region_item.move = new_move
-        #     body_region_item.save()         
+        new_move = Moves()        
 
         new_move.daddy_o = Daddy_O.objects.get(user=request.auth.user)
         new_move.difficulty_type = Difficulty_Type.objects.get(
             pk=request.data['difficulty_type'])
+        new_move.situation_type = Situation_Type.objects.get(
+            pk=request.data['situation_type'])
+        new_move.body_region= Body_Region.objects.get(
+            pk=request.data['body_region'])
 
         new_move.name = request.data["name"]
         new_move.link = request.data["link"]
         new_move.save()
-
-        # Then some how I take all_situations and all_body_regions then make then into their own shit through the serializer
 
         serializer = Moves_Serializer(
             new_move, context={'request': request})
@@ -84,12 +68,15 @@ class Move(ViewSet):
             Response -- Empty body with 204 status code
         """
         updated_move = Moves.objects.get(pk=pk)
+
         updated_move.name = request.data["name"]
-        daddy_o = Daddy_O.objects.get(user=request.auth.user)
-        updated_move.daddy_o= daddy_o
-        difficulty_type = Difficulty_Type.objects.get(
+        updated_move.daddy_o = Daddy_O.objects.get(user=request.auth.user)
+        updated_move.difficulty_type = Difficulty_Type.objects.get(
             pk=request.data['difficulty_type'])
-        updated_move.difficulty_type = difficulty_type
+        updated_move.situation_type = Situation_Type.objects.get(
+            pk=request.data['situation_type'])
+        updated_move.body_region= Body_Region.objects.get(
+            pk=request.data['body_region'])
         updated_move.link = request.data["link"]
         updated_move.save()
 

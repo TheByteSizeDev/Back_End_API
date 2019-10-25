@@ -6,7 +6,9 @@
             "name": "Washing Machine",
             "link": "https://youtu.be/efNA4NYjAmA?t=55",
             "daddy_o": 2,
-            "difficulty_type": 1 
+            "difficulty_type": 1,
+            "situation_type": 4,
+            "body_region": 2 
         }
     },
     {
@@ -16,7 +18,9 @@
             "name": "The Running Man",
             "link": "https://www.youtube.com/watch?v=lYpRasK4c9k",
             "daddy_o": 2,
-            "difficulty_type": 2 
+            "difficulty_type": 2,
+            "situation_type": 4,
+            "body_region": 3  
         }
     },
     {
@@ -26,7 +30,9 @@
             "name": "The Sprinkler",
             "link": "https://www.youtube.com/watch?v=bOtAzgw_yEA",
             "daddy_o": 3,
-            "difficulty_type": 3 
+            "difficulty_type": 1,
+            "situation_type": 6,
+            "body_region": 2  
         }
     }
 ]
